@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: 'DailyJSX',
     author: 'Nadun Indunil',
-    description: 'Personal blog by Nadun Indunil. Welcome to my coding diary.',
+    description: 'Personal blog by Nadun Indunil. Welcome to my developer diary.',
     siteUrl: 'https://dailyjsx.com',
     social: {
       twitter: '@nadmatrix',
     },
   },
-  pathPrefix: '/',
+  pathPrefix: '/dailyjsx.com',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -136,7 +136,7 @@ module.exports = {
       options: {
         name: `DailyJSX`,
         short_name: `DailyJSX`,
-        start_url: `/`,
+        start_url: `/dailyjsx.com`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
