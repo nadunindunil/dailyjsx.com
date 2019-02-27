@@ -8,7 +8,7 @@ module.exports = {
       twitter: '@nadmatrix',
     },
   },
-  pathPrefix: '/dailyjsx.com',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -136,7 +136,7 @@ module.exports = {
       options: {
         name: `DailyJSX`,
         short_name: `DailyJSX`,
-        start_url: `/dailyjsx.com`,
+        start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
