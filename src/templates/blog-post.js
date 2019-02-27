@@ -15,6 +15,7 @@ import {
   createLanguageLink,
   loadFontsForCode,
 } from '../utils/i18n';
+import { DiscussionEmbed } from "disqus-react";
 
 const GITHUB_USERNAME = 'nadunindunil';
 const GITHUB_REPO_NAME = 'dailyjsx.com';
@@ -87,6 +88,7 @@ class Translations extends React.Component {
 }
 
 class BlogPostTemplate extends React.Component {
+  
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
@@ -98,6 +100,13 @@ class BlogPostTemplate extends React.Component {
       translatedLinks,
     } = this.props.pageContext;
     const lang = post.fields.langKey;
+
+    // disqus
+    const disqusShortname = "dailyjsx";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
 
     // Replace original links with translated when available.
     let html = post.html;
@@ -185,7 +194,8 @@ class BlogPostTemplate extends React.Component {
               fontFamily: systemFont,
             }}
           >
-            <Signup />
+            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            {/* <Signup /> */}
           </div>
           <h3
             style={{
