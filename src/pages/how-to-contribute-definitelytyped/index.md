@@ -4,7 +4,7 @@ date: '2019-03-01'
 spoiler: The one with Typescript Definition File
 ---
 
-I was working on a Typescript project last few weeks and I was awesome to work with javascript with superpowers. One day I found that one node module doesn’t have types, which ultimately made me do the typings since I was so arrogant to ignore typings. This post will cover the whole process and how to contribute to DefinitelyTyped repo.
+I was working on a Typescript project last few weeks and It was awesome to work with javascript with superpowers. One day I found that one node module doesn’t have types, which ultimately made me do the typings since I was so arrogant to ignore typings. This post will cover the whole process and how to contribute to DefinitelyTyped repo.
 
 First, find the Github repo named as [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) and fork the repo.
 
