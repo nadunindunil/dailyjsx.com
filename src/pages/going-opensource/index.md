@@ -2,6 +2,7 @@
 title: Going Open Source with Github
 date: '2018-02-01'
 spoiler: how to go open-source with Github
+author: 'Nadun Indunil'
 ---
 
 Open source softwares means an free softwares that anyone can use for the development or for business. These are published under open source licencees so other developers can read and use those softwares for their projects as well.

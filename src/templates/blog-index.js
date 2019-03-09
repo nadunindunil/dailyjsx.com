@@ -38,37 +38,57 @@ class BlogIndexTemplate extends React.Component {
             </Panel>
           )}
 
-          {posts && posts.length > 0 && posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug;
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
+          {posts &&
+            posts.length > 0 &&
+            posts.map(({ node }) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug;
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: rhythm(1),
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link
+                        style={{ boxShadow: 'none' }}
+                        to={node.fields.slug}
+                        rel="bookmark"
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+                    <small
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: rhythm(0.6),
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.spoiler,
+                      }}
+                    />
+                    <br />
+                    <small>
+                      {formatPostDate(node.frontmatter.date, 'en')}
+                      {` • ${formatReadingTime(node.timeToRead)}`}
+                    </small>
+                  </header>
+                  <h5
                     style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: rhythm(1),
-                      marginBottom: rhythm(1 / 4),
+                      marginTop: 7,
+                      marginBottom: 3,
                     }}
                   >
-                    <Link
-                      style={{ boxShadow: 'none' }}
-                      to={node.fields.slug}
-                      rel="bookmark"
-                    >
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>
-                    {formatPostDate(node.frontmatter.date, 'en')}
-                    {` • ${formatReadingTime(node.timeToRead)}`}
-                  </small>
-                </header>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
-              </article>
-            );
-          })}
+                    by{' '}
+                    <span style={{ color: 'rgb(255, 167, 196)' }}>
+                      {node.frontmatter.author}
+                    </span>
+                  </h5>
+                </article>
+              );
+            })}
         </main>
         <Footer />
       </Layout>
@@ -101,6 +121,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
+            author
           }
         }
       }

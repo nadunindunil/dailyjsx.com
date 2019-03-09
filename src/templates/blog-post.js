@@ -4,6 +4,7 @@ import get from 'lodash/get';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
+import Author from '../components/Author';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Signup from '../components/Signup';
@@ -15,7 +16,7 @@ import {
   createLanguageLink,
   loadFontsForCode,
 } from '../utils/i18n';
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from 'disqus-react';
 
 const GITHUB_USERNAME = 'nadunindunil';
 const GITHUB_REPO_NAME = 'dailyjsx.com';
@@ -88,7 +89,6 @@ class Translations extends React.Component {
 }
 
 class BlogPostTemplate extends React.Component {
-  
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
@@ -102,7 +102,7 @@ class BlogPostTemplate extends React.Component {
     const lang = post.fields.langKey;
 
     // disqus
-    const disqusShortname = "dailyjsx";
+    const disqusShortname = 'dailyjsx';
     const disqusConfig = {
       identifier: post.id,
       title: post.frontmatter.title,
@@ -194,7 +194,10 @@ class BlogPostTemplate extends React.Component {
               fontFamily: systemFont,
             }}
           >
-            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            <DiscussionEmbed
+              shortname={disqusShortname}
+              config={disqusConfig}
+            />
             {/* <Signup /> */}
           </div>
           <h3
@@ -214,7 +217,12 @@ class BlogPostTemplate extends React.Component {
               DailyJSX
             </Link>
           </h3>
-          <Bio />
+          <Author
+            author={require(`../authors/${post.frontmatter.author}/bio`)}
+            profilePicUrl={require(`../authors/${
+              post.frontmatter.author
+            }/image.jpg`)}
+          />
           <nav>
             <ul
               style={{
@@ -265,6 +273,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         spoiler
+        author
       }
       fields {
         slug
