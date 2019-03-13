@@ -47,7 +47,7 @@ Your project will display like this
 
 ![project explore in vs code](./projectExplore.png)
 
-# Implementation of Angular Chart
+# Implementation of Angular Charts
 
 ## Angular components
 
