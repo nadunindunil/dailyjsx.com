@@ -3,11 +3,9 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import '../fonts/fonts-post.css';
-import Bio from '../components/Bio';
 import Author from '../components/Author';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Signup from '../components/Signup';
 import Panel from '../components/Panel';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
@@ -17,6 +15,8 @@ import {
   loadFontsForCode,
 } from '../utils/i18n';
 import { DiscussionEmbed } from 'disqus-react';
+// import Bio from '../components/Bio';
+// import Signup from '../components/Signup';
 
 const GITHUB_USERNAME = 'nadunindunil';
 const GITHUB_REPO_NAME = 'dailyjsx.com';
