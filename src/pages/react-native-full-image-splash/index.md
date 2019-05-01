@@ -3,6 +3,7 @@ title: How to add full image splash screen in React-Native
 date: '2019-03-02'
 spoiler: The one with React Native Splash Screen
 author: 'Nadun Indunil'
+tags: ['react', 'react-native']
 ---
 
 ## Problem:

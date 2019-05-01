@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
+import kebabCase from 'lodash/kebabCase';
 
 import '../fonts/fonts-post.css';
 import Author from '../components/Author';
@@ -15,6 +16,7 @@ import {
   loadFontsForCode,
 } from '../utils/i18n';
 import { DiscussionEmbed } from 'disqus-react';
+import Tags from './tags';
 // import Bio from '../components/Bio';
 // import Signup from '../components/Signup';
 
@@ -100,6 +102,7 @@ class BlogPostTemplate extends React.Component {
       translatedLinks,
     } = this.props.pageContext;
     const lang = post.fields.langKey;
+    const tags = post.frontmatter.tags;
 
     // disqus
     const disqusShortname = 'dailyjsx';
@@ -164,14 +167,29 @@ class BlogPostTemplate extends React.Component {
                 {formatPostDate(post.frontmatter.date, lang)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
-              {translations.length > 0 && (
+              {/*{translations.length > 0 && (
                 <Translations
                   translations={translations}
                   editUrl={editUrl}
                   languageLink={languageLink}
                   lang={lang}
                 />
-              )}
+              )}*/}
+              <Panel style={{ fontFamily: systemFont }}>
+                <span>Related tags: </span>
+                {tags.length > 0 && (
+                  <>
+                    {tags.map((tag, i) => (
+                      <React.Fragment key={tag}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>
+                          {tag}
+                        </Link>
+                        {i === tags.length - 1 ? '' : ' • '}
+                      </React.Fragment>
+                    ))}
+                  </>
+                )}
+              </Panel>
             </header>
             <div dangerouslySetInnerHTML={{ __html: html }} />
             <footer>
@@ -274,6 +292,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         spoiler
         author
+        tags
       }
       fields {
         slug

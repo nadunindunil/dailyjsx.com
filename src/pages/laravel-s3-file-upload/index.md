@@ -3,6 +3,7 @@ title: How to upload files from Laravel project to AWS S3
 date: '2019-05-01'
 spoiler: Step by step guide to implement S3 file upload in Laravel
 author: 'Nadun Indunil'
+tags: ['Laravel', 'AWS', 'S3']
 ---
 
 If you are looking for a suitable option rather than uploading images into `/public` folder in Laravel you have come to the right place. This solution will not only highly scalable but also increase you performance and saves your hosting space.

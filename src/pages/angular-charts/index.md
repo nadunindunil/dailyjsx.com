@@ -3,6 +3,7 @@ title: Charts in Angular using ASP.NET Core 2.0 Web API
 date: '2019-03-13'
 spoiler: The one with Angular charts
 author: 'Maheshi Gunarathne'
+tags: ['angular', '.NET', 'api']
 ---
 
 Here I am going to create an Angular chart by using the ASP.NET Web API with Dapper for the Data Access Layer, SQL Server for the database. The IDE used was Visual Studio 2017.

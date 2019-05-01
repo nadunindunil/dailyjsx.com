@@ -3,6 +3,7 @@ title: EEG
 date: '2019-01-01'
 spoiler: A brief introduction to EEG
 author: 'Nadun Indunil'
+tags: ['eeg', 'intro']
 ---
 
 Our brain cells are communicating with each other and that process uses electrical impulses to communicate. Electroencephalogram or (EEG) is used to evaluate these electrical impulses. EEG tests are used to detect potential problems or specific phenomena associated with brain activities.

@@ -3,6 +3,7 @@ title: Docker CLI Recap
 date: '2019-04-16'
 spoiler: Useful Docker CLI commands
 author: 'Nadun Indunil'
+tags: ['Docker', 'recap']
 ---
 
 In this article, I am going to present a few valuable docker CLI commands that we use every day. I assume that you have the basic knowledge about what docker is.
