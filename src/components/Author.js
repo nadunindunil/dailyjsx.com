@@ -4,6 +4,7 @@ import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
   render() {
+    const { author, profilePicUrl } = this.props;
     return (
       <div
         style={{
@@ -12,8 +13,8 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={profilePic}
-          alt={`Nadun Indunil`}
+          src={profilePicUrl}
+          alt={author.name}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -22,10 +23,11 @@ class Bio extends React.Component {
             borderRadius: '50%',
           }}
         />
-        <p style={{ maxWidth: 310 }}>
-          Programming blog by{' '}
-          <a href="https://mobile.twitter.com/nadmatrix">Nadun Indunil</a>.{' '}
-          Welcome to our programming journal.
+        <p style={{ maxWidth: 560 }}>
+          Article by {' '}
+          <a href={`https://mobile.twitter.com/${author.twitter}`}>{author.name}</a>.
+          <br/>
+          {author.meta}
         </p>
       </div>
     );

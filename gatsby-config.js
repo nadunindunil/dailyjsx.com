@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'DailyJSX',
     author: 'Nadun Indunil',
-    description: 'Personal blog by Nadun Indunil. Welcome to my developer diary.',
+    description: 'Technology blog by Nadun Indunil.',
     siteUrl: 'https://dailyjsx.com',
     social: {
       twitter: '@nadmatrix',
