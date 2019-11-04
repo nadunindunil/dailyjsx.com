@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 
 class Footer extends React.Component {
@@ -39,6 +39,12 @@ class Footer extends React.Component {
         >
           stack overflow
         </a>
+        &bull;{' '}
+        <Link to="privacy-policy">privacy policy</Link>
+        &bull;{' '}
+        <Link to="/about-us">about us</Link>
+        &bull;{' '}
+        <Link to="/contact-us">contact us</Link>
       </footer>
     );
   }
