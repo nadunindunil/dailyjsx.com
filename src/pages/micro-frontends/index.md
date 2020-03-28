@@ -6,7 +6,7 @@ author: 'Nadun Indunil'
 tags: ['micro-fe', 'architecture']
 ---
 
-Implementing and maintaining a frontend is relatively harder than a backend project. It could get even worse if you have a huge frontend with different teams to develop different UI pieces. You might have seen teams trying to struggle with huge UIs to manage and their codebases with following various methods. Sometimes they rewrite their whole frontend architecture to solve this issue. However, there is an answer to the struggle, Micro Frontends.
+Implementing and maintaining a frontend is relatively harder than a backend project. It could get even worse if you have a huge frontend with different teams to develop different UI pieces. You might have seen teams trying to struggle with huge UIs to manage their codebases with following various methods. Sometimes they rewrite their whole frontend architecture to solve this issue. However, there is an answer to the struggle, Micro Frontends.
 
 The very first thing someone would ask is, when should we use micro frontend architecture. It could be listed as below,
 - You have different teams to develop a huge application
@@ -18,7 +18,7 @@ The very first thing someone would ask is, when should we use micro frontend arc
 Adhering to Mirco-FE architecture would provide you various benefits. Among many, I would like to discuss the following,
 - **Maintainable small code base** 
 
-The frontend code base will be divided into smaller frontends which is more easier to maintain. In addition to that, the Decoupled codebase minimizes the ability to propagate a bug from code change to the whole application. (I would suggest to avoid or minimize the coupling between micro frontends. Coupling between micro frontends would make implementation and decision making harder for developers.)
+The frontend code base will be divided into smaller frontends which is more easier to maintain. In addition to that, the Decoupled codebase minimizes the ability to propagate a bug from code change to the whole application. (I would suggest to avoid or minimize the coupling between micro frontends. Coupling between micro frontends would make implementation and decision a nightmare for developers.)
 - **Incremental upgrades** 
 
 This smaller codebase would allow you to update or even rewrite your application in an incremental manner which you found almost impossible in a monolithic frontend. Hereafter, the development team can adapt to a new frontend technology even the starting point of the application was much older technology. Which you may upgrade in a later phase of the development cycle.
