@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DailyJSX]]></title><description><![CDATA[Technology blog by Nadun Indunil.]]></description><link>https://dailyjsx.com</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Mar 2020 08:21:09 GMT</lastBuildDate><item><title><![CDATA[Introduction to Micro Frontends]]></title><description><![CDATA[The one with micro frontends architecture explained]]></description><link>https://dailyjsx.com/micro-frontends/</link><guid isPermaLink="false">https://dailyjsx.com/micro-frontends/</guid><pubDate>Mon, 09 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Implementing and maintaining a frontend is relatively harder than a backend project. It could get even worse if you have a huge frontend with different teams to develop different UI pieces. You might have seen teams trying to struggle with huge UIs to manage and their codebases with following various methods. Sometimes they rewrite their whole frontend architecture to solve this issue. However, there is an answer to the struggle, Micro Frontends.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DailyJSX]]></title><description><![CDATA[Technology blog by Nadun Indunil.]]></description><link>https://dailyjsx.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 28 Mar 2020 21:59:40 GMT</lastBuildDate><item><title><![CDATA[Localstack for mimic AWS resources in local development]]></title><description><![CDATA[The one with mocking AWS resources locally]]></description><link>https://dailyjsx.com/localstack/</link><guid isPermaLink="false">https://dailyjsx.com/localstack/</guid><pubDate>Sun, 29 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Have you ever come across an issue of using AWS resources in the development environment? I bet most of you have faced it. This issue might look much simpler and you might have used the existing AWS resource to carry on your local development. But, did you think about a way to solve this issue when testing happens on top of your framework or application?&lt;/p&gt;
+&lt;p&gt;Recently when I was developing a node.js project I found an interesting platform (&lt;a href=&quot;https://github.com/localstack/localstack&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;LocalStack&lt;/a&gt;) which helped us to mimic AWS resources. This made my life easier when not only testing my application but also developing it.&lt;/p&gt;
+&lt;p&gt;Other than easy to test application, you can gain these benefits from Localstack,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;No need to pay for AWS usage for your local development.&lt;/li&gt;
+&lt;li&gt;No need to log in to the AWS console.&lt;/li&gt;
+&lt;li&gt;Separate development ENV so everything under your control. (you can create and delete resources easily)&lt;/li&gt;
+&lt;li&gt;No sharing and getting problems from other developers since it’s separated. ☺️&lt;/li&gt;
+&lt;li&gt;It’s full offline.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/869e4/localstack.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 40.33722438391699%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABVElEQVQoz3VSa0vDQBDM//9NxVpBsX7QPmgp2lowtkkkTa55Xu417m3SoqALw3I7u7M3lwRVVUF2HTpFoCylZHRKwVhDNcV15hg9p5TqOco8Q5zXCnwjyhAqWkDHM6DNAFXBJEvI4xw2ewOHkXDpGuZrBXfawFkNV3zQzAImXhIvEMUJAq+O7BX5ZoxmNwHqBOgKtPt7pOsRdPTSC+oW9jBFs3+Ai55JQAH5FtXujnvRxkizfBAcQluyZskS3cZYxTVLttVgyzkLuhrxLRT1Slri0Nd8pGn6W3CfvmM0G2GyusVnHvZLtEZZliiKgs+KFj1tpxjPbzDdPqJRDQn282EYIvDbL1HIM47iwKi6En+FobdLihiROHLW3vogWNf18FHYmkV2yhg5vYUQguvOuSsu53N+5j6RC56zg2W+YdM010al+9/BZ2/1P0HP+T6ff3Je6xu2vGnJqAINCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;localstack in different environment&quot;
+        title=&quot;&quot;
+        src=&quot;https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/40fad/localstack.png&quot;
+        srcset=&quot;https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/707e9/localstack.png 148w,https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/649e0/localstack.png 295w,https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/40fad/localstack.png 590w,https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/b3fef/localstack.png 885w,https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/301c0/localstack.png 1180w,https://dailyjsx.com/static/9ee5b1deddf2c483fae3a857b7045738/869e4/localstack.png 1542w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Fig. 1: A diagram of the Localstack usage in test/dev environment&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So how would someone use Localstack with their application?
+Let’s discuss this step by step.&lt;/p&gt;
+&lt;p&gt;There are multiple ways to start Localstack in your machine, but I would prefer the Docker included way because it’s more cleaner and easier than other ways. (This might depend on the docker knowledge you and your team possess)&lt;/p&gt;
+&lt;p&gt;Refer this link for other methods to start Localstack: &lt;a href=&quot;https://github.com/localstack/localstack&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/localstack/localstack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The following example will be using node.js with Docker to build a backend. But please note that Localstack is not limited to node.js nor Docker technologies. However, If you are following the same stack I do, You won’t have to change much in your codebase.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prepare your docker-compose file to cater the localstack&lt;/li&gt;
+&lt;li&gt;How to create resources locally&lt;/li&gt;
+&lt;li&gt;Code changes in node.js application&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;preparing-your-docker-compose-file&quot;&gt;&lt;a href=&quot;#preparing-your-docker-compose-file&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Preparing your docker-compose file&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;version: &amp;quot;3&amp;quot;
+services:
+  app:
+    image: node:alpine
+    volumes:
+      - ./:/app
+    working_dir: /app
+    depends_on:
+      - mongo
+    environment:
+      NODE_ENV: development
+      URL: mongo
+      PORT: 27017
+    ports:
+      - 3001:3001
+    links:
+      - mongo:mongo
+      - localstack:localstack
+    command: npm run dev
+  ...
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack_container
+    ports:
+      - &amp;#39;4563-4599:4563-4599&amp;#39;
+      - &amp;#39;8055:8080&amp;#39;
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - &amp;#39;./.localstack:/tmp/localstack&amp;#39;
+      - &amp;#39;/var/run/docker.sock:/var/run/docker.sock&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There are a few things you need to consider when writing the docker-compose file. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You should include &lt;code class=&quot;language-text&quot;&gt;localstack&lt;/code&gt; as a link under your application. (please observe the example above)&lt;/li&gt;
+&lt;li&gt;I have provided &lt;code class=&quot;language-text&quot;&gt;SERVICES=s3&lt;/code&gt; as env variables under the localstack. That means this docker instance going to mimic functionality of an AWS S3.&lt;/li&gt;
+&lt;li&gt;Note that ports range I have enabled under localstack. &lt;code class=&quot;language-text&quot;&gt;&amp;#39;4563-4599:4563-4599&amp;#39;&lt;/code&gt; is for service mimic ports. &lt;code class=&quot;language-text&quot;&gt;&amp;#39;8055:8080&amp;#39;&lt;/code&gt; for localstack dashboard.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;you can find more information here: &lt;a href=&quot;https://github.com/localstack/localstack&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/localstack/localstack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have crafted the docker-composer, lets run our docker instances. use&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;docker-compose up -d&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to run docker instances.&lt;/p&gt;
+&lt;h2 id=&quot;create-resources-locally&quot;&gt;&lt;a href=&quot;#create-resources-locally&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Create resources locally&lt;/h2&gt;
+&lt;p&gt;run &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;aws --endpoint-url=http://localhost:4572 s3 mb s3://test-app-develop
+aws --endpoint-url=http://localhost:4572 s3api put-bucket-acl --bucket test-app-develop --acl public-read&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;in your console.&lt;/p&gt;
+&lt;p&gt;This will create an S3 bucket named &lt;code class=&quot;language-text&quot;&gt;test-app-develop&lt;/code&gt; and bucket ACL (public-read) respectively.&lt;/p&gt;
+&lt;h2 id=&quot;code-changes-in-nodejs-application&quot;&gt;&lt;a href=&quot;#code-changes-in-nodejs-application&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code changes in node.js application&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// useLocal = is app running in development&lt;/span&gt;
+
+config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;s3 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  region&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;us-east-1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  endpoint&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; useLocal &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;http://localstack:4572&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; undefined&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  credentials&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; useLocal
+    &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        accessKeyId&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;123&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        secretAccessKey&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;xyz&apos;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; undefined&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  s3ForcePathStyle&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; s3 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AWS&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;S3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;s3&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;useLocal is a flag I used to determine running app env. This will help us to toggle S3 config depend on the env.&lt;/li&gt;
+&lt;li&gt;It is important to use &lt;code class=&quot;language-text&quot;&gt;http://localstack:4572&lt;/code&gt; as S3 endpoint. It is not &lt;code class=&quot;language-text&quot;&gt;http://localhost:4572&lt;/code&gt; because of Localstack running inside a Docker container.&lt;/li&gt;
+&lt;li&gt;You may find that I have added dummy credentials, That is because we cannot leave it empty. But You can be more creative and find an elegant way. (without dummy details in code)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;references&quot;&gt;&lt;a href=&quot;#references&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/localstack/localstack&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/localstack/localstack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/good-idea/localstack-demo&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/good-idea/localstack-demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dev.to/goodidea/how-to-fake-aws-locally-with-localstack-27me&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://dev.to/goodidea/how-to-fake-aws-locally-with-localstack-27me&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at dailyjsx.com. You can read it online by &lt;a href=&quot;https://dailyjsx.com/localstack/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Introduction to Micro Frontends]]></title><description><![CDATA[The one with micro frontends architecture explained]]></description><link>https://dailyjsx.com/micro-frontends/</link><guid isPermaLink="false">https://dailyjsx.com/micro-frontends/</guid><pubDate>Mon, 09 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Implementing and maintaining a frontend is relatively harder than a backend project. It could get even worse if you have a huge frontend with different teams to develop different UI pieces. You might have seen teams trying to struggle with huge UIs to manage their codebases with following various methods. Sometimes they rewrite their whole frontend architecture to solve this issue. However, there is an answer to the struggle, Micro Frontends.&lt;/p&gt;
 &lt;p&gt;The very first thing someone would ask is, when should we use micro frontend architecture. It could be listed as below,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You have different teams to develop a huge application&lt;/li&gt;
@@ -10,7 +140,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Maintainable small code base&lt;/strong&gt; &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The frontend code base will be divided into smaller frontends which is more easier to maintain. In addition to that, the Decoupled codebase minimizes the ability to propagate a bug from code change to the whole application. (I would suggest to avoid or minimize the coupling between micro frontends. Coupling between micro frontends would make implementation and decision making harder for developers.)&lt;/p&gt;
+&lt;p&gt;The frontend code base will be divided into smaller frontends which is more easier to maintain. In addition to that, the Decoupled codebase minimizes the ability to propagate a bug from code change to the whole application. (I would suggest to avoid or minimize the coupling between micro frontends. Coupling between micro frontends would make implementation and decision a nightmare for developers.)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Incremental upgrades&lt;/strong&gt; &lt;/li&gt;
 &lt;/ul&gt;

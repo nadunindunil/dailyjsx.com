@@ -1,0 +1,1 @@
+{"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/localstack/"},"frontmatter":{"title":"Localstack for mimic AWS resources in local development"}}},{"node":{"fields":{"slug":"/micro-frontends/"},"frontmatter":{"title":"Introduction to Micro Frontends"}}}]}},"pageContext":{"tag":"architecture"}}
