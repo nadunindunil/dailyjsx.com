@@ -1,5 +1,5 @@
 ---
-title: Localstack for mimic AWS resources in local development
+title: Using Localstack to mimic AWS resources in local development
 date: '2020-03-29'
 spoiler: The one with mocking AWS resources locally
 author: 'Nadun Indunil'
@@ -8,7 +8,7 @@ tags: ['AWS', 'architecture', 'nodejs', 'docker']
 
 Have you ever come across an issue of using AWS resources in the development environment? I bet most of you have faced it. This issue might look much simpler and you might have used the existing AWS resource to carry on your local development. But, did you think about a way to solve this issue when testing happens on top of your framework or application?
 
-Recently when I was developing a node.js project I found an interesting platform ([LocalStack](https://github.com/localstack/localstack)) which helped us to mimic AWS resources. This made my life easier when not only testing my application but also developing it.
+Recently, when I was developing a node.js project I found an interesting platform named ([LocalStack](https://github.com/localstack/localstack)) which helped us to mimic AWS resources. This made our lives easier when not only testing our application but also application development.
 
 Other than easy to test application, you can gain these benefits from Localstack,
 
