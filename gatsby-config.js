@@ -159,11 +159,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-3888509763016934`
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-adsense`,
+    //   options: {
+    //     publisherId: `ca-pub-3888509763016934`
+    //   },
+    // },
   ],
 };
