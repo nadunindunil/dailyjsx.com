@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/gatsby/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/static-website-pipeline/"},"frontmatter":{"title":"How to use AWS code pipeline to deploy a Static Website into S3"}}}]}},"pageContext":{"tag":"gatsby"}},"staticQueryHashes":[]}

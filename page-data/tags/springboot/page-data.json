@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/springboot/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/documentdb-tls-connect/"},"frontmatter":{"title":"How to securely connect to an AWS DocumentDb using SpringBoot"}}}]}},"pageContext":{"tag":"springboot"}},"staticQueryHashes":[]}

@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/docker/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/localstack/"},"frontmatter":{"title":"Using Localstack to mimic AWS resources in local development"}}}]}},"pageContext":{"tag":"docker"}},"staticQueryHashes":[]}
